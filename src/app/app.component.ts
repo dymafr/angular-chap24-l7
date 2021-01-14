@@ -22,6 +22,7 @@ export class AppComponent implements OnInit {
     this.userService.fetchUsers().subscribe((users: User[]) => {
       this.dataSource.data = users;
       this.dataSource.paginator = this.paginateur;
+      this.dataSource.sort = this.sort;
     });
   }
 }
