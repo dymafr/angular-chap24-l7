@@ -25,4 +25,10 @@ export class AppComponent implements OnInit {
       this.dataSource.sort = this.sort;
     });
   }
+
+  updateFilter(event: Event) {
+    let filtre = (event.target as HTMLInputElement).value;
+    filtre = filtre.trim().toLowerCase();
+    this.dataSource.filter = filtre;
+  }
 }
